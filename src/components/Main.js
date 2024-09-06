@@ -109,7 +109,7 @@ function Main() {
                             value={input}
                             type='text'
                             onChange={handleInputChange}
-                            placeholder="Enter your message"
+                            placeholder="Enter your Query"
                         />
 
                         <img src={logos.Send} onClick={() => onsent()} className=' hover:scale-105  w-14 h-14 p-2 border-2 hover:border-4  rounded-full shadow-xl focus:shadow-2xl'></img>
