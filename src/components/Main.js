@@ -77,7 +77,7 @@ function Main() {
                             </div>
                         </>
                         : <div className='p-5 sm:p-0'>
-                            <div className='mx-auto bg-gray-50 w-full sm:w-2/3 shadow-lg rounded-2xl max-h-96 overflow-y-scroll scrollbar-hide'>
+                            <div className='mx-auto bg-gray-50 w-full sm:w-2/3 shadow-lg rounded-2xl max-h-96 overflow-y-scroll '>
                                 <div className='p-5'>
                                     <img src={logos.User} alt='/' className='w-8'></img>
                                     <p>{recentPrompt}</p>
