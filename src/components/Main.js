@@ -77,26 +77,28 @@ function Main() {
                             </div>
                         </>
                         : <div className='p-5 sm:p-0'>
-                            <div className='mx-auto bg-gray-50 w-full sm:w-2/3 shadow-lg rounded-2xl max-h-96 overflow-y-scroll '>
-                                <div className='p-5'>
-                                    <img src={logos.User} alt='/' className='w-8'></img>
-                                    <p>{recentPrompt}</p>
-                                </div>
-                                <div className='mx-auto w-full p-5'>
-                                    {
-                                        loading ?
-                                            <div className='flex gap-2 items-center w-full'>
-                                                <SvgLoader />
-                                                <span>Generating...</span>
-                                            </div>
-                                            :
-                                            <div>
-                                                <p dangerouslySetInnerHTML={{ __html: resultData }}></p>
-                                            </div>
-                                    }
-                                </div>
-                            </div>
-                        </div>
+    						<div className='mx-auto bg-gray-50 w-full sm:w-2/3 shadow-lg rounded-2xl max-h-96 overflow-y-auto'>
+        						<div className='p-5'>
+            						<img src={logos.User} alt='/' className='w-8' />
+            						<p>{recentPrompt}</p>
+        						</div>
+        					<div className='mx-auto w-full p-5'>
+            				{
+                				loading ? (
+                   							 <div className='flex gap-2 items-center w-full'>
+                       						 <SvgLoader />
+                       						 <span>Generating...</span>
+                    						</div>
+                				) : (
+                    				<div>
+                        				<p dangerouslySetInnerHTML={{ __html: resultData }}></p>
+                    				</div>
+                				)
+            				}
+        					</div>
+     					</div>
+					</div>
+
                 }
                 <div>
                     <div className='flex justify-between w-11/12 sm:w-3/5 mx-auto gap-5 mt-24'>
